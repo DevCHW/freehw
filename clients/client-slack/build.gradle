@@ -1,0 +1,7 @@
+dependencies {
+    // slack
+    implementation 'com.slack.api:slack-api-client:1.30.0'
+
+    // spring-context
+    implementation 'org.springframework:spring-context'
+}

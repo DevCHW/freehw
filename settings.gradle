@@ -1,1 +1,20 @@
+pluginManagement {
+    plugins {
+        id 'org.springframework.boot' version "${springBootVersion}"
+        id 'io.spring.dependency-management' version "${springDependencyManagementVersion}"
+        id 'org.asciidoctor.jvm.convert' version "${asciidoctorConvertVersion}"
+        id 'io.spring.javaformat' version "${springJavaFormatVersion}"
+    }
+}
+
 rootProject.name = 'freehw'
+include 'core:core-api'
+include 'core:core-enum'
+include 'storage:db-core'
+include 'tests:api-docs'
+include 'support:logging'
+include 'support:monitoring'
+include 'clients:client-slack'
+include 'core:core-domain'
+findProject(':core:core-domain')?.name = 'core-domain'
+

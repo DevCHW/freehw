@@ -13,7 +13,8 @@ public class MemberController {
 
     @GetMapping("/members/{memberId}")
     public ApiResponse<MemberResponse> member(@PathVariable("memberId") Long memberId) {
-        return ApiResponse.success()
+        return null;
+//        return ApiResponse.success();
     }
 
 }

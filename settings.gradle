@@ -16,5 +16,7 @@ include 'support:logging'
 include 'support:monitoring'
 include 'clients:client-slack'
 include 'core:core-domain'
-findProject(':core:core-domain')?.name = 'core-domain'
+include 'storage:db-jpa'
+include 'support:jwt'
+findProject(':support:jwt')?.name = 'jwt'
 

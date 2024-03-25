@@ -1,0 +1,33 @@
+slack:
+  webhook:
+    url: YOUR_WEBHOOK_URL
+
+---
+spring.config.activate.on-profile: local
+slack:
+  webhook:
+    url: YOUR_WEBHOOK_URL
+
+---
+spring.config.activate.on-profile: local-dev
+slack:
+  webhook:
+    url: YOUR_WEBHOOK_URL
+
+---
+spring.config.activate.on-profile: dev
+slack:
+  webhook:
+    url: YOUR_WEBHOOK_URL
+
+---
+spring.config.activate.on-profile: staging
+slack:
+  webhook:
+    url: YOUR_WEBHOOK_URL
+
+---
+spring.config.activate.on-profile: live
+slack:
+  webhook:
+    url: YOUR_WEBHOOK_URL

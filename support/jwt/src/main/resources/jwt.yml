@@ -1,0 +1,30 @@
+jwt:
+  secret: dev20208901234567890123456789012
+
+---
+spring.config.activate.on-profile: local
+
+jwt:
+  secret: local20208901234567890123456789012
+---
+spring.config.activate.on-profile: local-dev
+
+jwt:
+  secret: local20208901234567890123456789012
+
+---
+spring.config.activate.on-profile: dev
+
+jwt:
+  secret: dev20208901234567890123456789012
+
+---
+spring.config.activate.on-profile: staging
+
+jwt:
+  secret: staging20208901234567890123456789012
+
+---
+spring.config.activate.on-profile: live
+jwt:
+  secret: live20208901234567890123456789012

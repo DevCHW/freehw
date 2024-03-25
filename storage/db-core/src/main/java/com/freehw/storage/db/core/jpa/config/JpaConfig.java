@@ -1,4 +1,4 @@
-package com.freehw.storage.db.core.config;
+package com.freehw.storage.db.core.jpa.config;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EntityScan(basePackages = "com.freehw.storage.db.core")
-@EnableJpaRepositories(basePackages = "com.freehw.storage.db.core")
-public class CoreJpaConfig {
+@EntityScan(basePackages = "com.freehw.storage.db.core.jpa")
+@EnableJpaRepositories(basePackages = "com.freehw.storage.db.core.jpa")
+public class JpaConfig {
 }

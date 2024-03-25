@@ -1,5 +1,6 @@
 package com.freehw.storage.db.core.jpa.member.entity;
 
+import com.freehw.core.enums.member.MemberGender;
 import com.freehw.core.enums.member.MemberRole;
 import com.freehw.storage.db.core.jpa.BaseEntity;
 import jakarta.persistence.*;
@@ -39,6 +40,10 @@ public class MemberEntity extends BaseEntity {
     
     @Comment("회원 생년월일")
     private LocalDate birthDay;
+
+    @Comment("성별")
+    @Enumerated(EnumType.STRING)
+    private MemberGender gender;
 
     @Comment("권한")
     @Enumerated(EnumType.STRING)

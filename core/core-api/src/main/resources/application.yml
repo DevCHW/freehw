@@ -6,7 +6,9 @@ spring:
     import:
       - monitoring.yml
       - logging.yml
+      - client-slack.yml
       - db-core.yml
+      - thymeleaf.yml
   web.resources.add-mappings: false
 
 server:

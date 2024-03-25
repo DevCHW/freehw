@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class CoreDataSourceConfig {
+public class DataSourceConfig {
     @Bean
     @ConfigurationProperties(prefix = "storage.datasource.core")
     public HikariConfig coreHikariConfig() {

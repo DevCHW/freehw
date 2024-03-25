@@ -1,11 +1,17 @@
-package com.freehw.storage.db.core;
+package com.freehw.storage.db.core.jpa;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
+@Getter
 @MappedSuperclass
 public abstract class BaseEntity {
 
@@ -13,23 +19,12 @@ public abstract class BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Comment("생성일자")
     @CreationTimestamp
-    @Column
     private LocalDateTime createdAt;
 
+    @Comment("마지막 업데이트일자")
     @UpdateTimestamp
-    @Column
     private LocalDateTime updatedAt;
 
-    public Long getId() {
-        return id;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
 }

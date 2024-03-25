@@ -1,4 +1,4 @@
 package com.freehw.core.domain.member;
 
-public class MemberWriter {
+public interface MemberWriter {
 }

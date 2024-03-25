@@ -1,14 +1,14 @@
-package com.freehw.core.enums.member;
+package com.freehw.core.enums.point;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum MemberGender {
-    MAN("Man", "남자"),
-    WOMEN("Women", "여자"),
-    UNKNOWN("Unknown", "알 수 없음");
+public enum PointTrxType {
+
+    CHARGE("Charge", "입금"),
+    USE("Use", "출금");
 
     private final String value;
     private final String description;

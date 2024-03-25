@@ -9,7 +9,7 @@ import org.hibernate.annotations.Comment;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "member")
+@Table(name = "member_point")
 public class MemberPointEntity {
 
     @Comment("Primary Key")
@@ -17,10 +17,10 @@ public class MemberPointEntity {
     private Long id;
 
     @Comment("회원 ID (FK)")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private MemberEntity member;
 
-    @Comment("회원의 포인트")
-    private Long point;
+    @Comment("포인트 잔액")
+    private Long balance;
 }

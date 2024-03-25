@@ -2,6 +2,7 @@ package com.freehw.storage.db.core.jpa.member.entity;
 
 import com.freehw.core.enums.member.MemberGender;
 import com.freehw.core.enums.member.MemberRole;
+import com.freehw.core.enums.member.MemberStatus;
 import com.freehw.storage.db.core.jpa.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -26,13 +27,18 @@ public class MemberEntity extends BaseEntity {
     @Column(nullable = false, unique = true)
     private String email;
 
+    @Comment("닉네임")
+    @Column(nullable = false, unique = true)
+    private String nickname;
+
     @Comment("비밀번호")
     @Column(nullable = false)
     private String password;
 
-    @Comment("회원 계정 활성 상태")
+    @Comment("회원 계정 상태")
     @Column(nullable = false)
-    private boolean active;
+    @Enumerated(EnumType.STRING)
+    private MemberStatus active;
 
     @Comment("회원 이름")
     @Column(nullable = false)
@@ -44,6 +50,12 @@ public class MemberEntity extends BaseEntity {
     @Comment("성별")
     @Enumerated(EnumType.STRING)
     private MemberGender gender;
+
+    @Comment("활동 점수")
+    private Long activityScore;
+
+    @Comment("프로필 이미지 URL")
+    private String profileImageUrl;
 
     @Comment("권한")
     @Enumerated(EnumType.STRING)

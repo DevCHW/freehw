@@ -1,4 +1,4 @@
-package com.freehw.storage.db.core.jpa.member.entity;
+package com.freehw.storage.db.core.jpa.comment.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -8,11 +8,15 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "member_email_token")
-public class MemberEmailToken {
+@Table(name = "comments_like")
+public class CommentLikeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String token;
+    private Long memberId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "comment_id")
+    private CommentEntity comment;
 }

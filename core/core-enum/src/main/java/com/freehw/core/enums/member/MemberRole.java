@@ -11,5 +11,5 @@ public enum MemberRole {
     USER("User"),
     ADMIN("Admin");
 
-    private final String description;
+    private final String value;
 }

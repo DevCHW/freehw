@@ -19,7 +19,7 @@ public class MemberController {
     @PostMapping("/api/v1/members")
     public ApiResponse<CreateMemberResponse> member(@RequestBody CreateMemberRequest request) {
         return null;
-//        return ApiResponse.success();
+        // return ApiResponse.success();
     }
 
     /**
@@ -28,7 +28,7 @@ public class MemberController {
     @DeleteMapping("/api/v1/members/{memberId}")
     public ApiResponse<MemberResponse> deleteMember(@PathVariable("memberId") Long memberId) {
         return null;
-//        return ApiResponse.success();
+        // return ApiResponse.success();
     }
 
     /**
@@ -37,7 +37,7 @@ public class MemberController {
     @GetMapping("/api/v1/members")
     public ApiResponse<List<MemberResponse>> getMembers() {
         return null;
-//        return ApiResponse.success();
+        // return ApiResponse.success();
     }
 
     /**
@@ -46,7 +46,7 @@ public class MemberController {
     @GetMapping("/api/v1/members/{memberId}")
     public ApiResponse<MemberResponse> getMemberOne(@PathVariable("memberId") Long memberId) {
         return null;
-//        return ApiResponse.success();
+        // return ApiResponse.success();
     }
 
 }

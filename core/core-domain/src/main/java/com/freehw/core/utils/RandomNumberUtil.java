@@ -26,4 +26,5 @@ public class RandomNumberUtil {
         // 생성된 문자열 반환
         return sb.toString();
     }
+
 }

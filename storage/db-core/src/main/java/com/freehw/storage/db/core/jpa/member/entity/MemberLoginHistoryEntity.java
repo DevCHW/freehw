@@ -14,7 +14,8 @@ import org.hibernate.annotations.Comment;
 public class MemberLoginHistoryEntity extends BaseEntity {
 
     @Comment("Primary Key")
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Comment("로그인 IP주소")

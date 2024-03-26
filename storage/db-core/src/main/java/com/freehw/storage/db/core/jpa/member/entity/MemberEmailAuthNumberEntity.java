@@ -12,9 +12,12 @@ import lombok.NoArgsConstructor;
 @Table(name = "member_email_token")
 public class MemberEmailAuthNumberEntity extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String requestId;
+
     private String randomNumber;
 
 }

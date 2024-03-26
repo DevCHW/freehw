@@ -7,11 +7,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum PointStatus {
 
-    ACTIVE("Active", "활성"),
-    INACTIVE("Inactive", "비활성"),
-    EXPIRED("Expired", "만료");
+    ACTIVE("Active", "활성"), INACTIVE("Inactive", "비활성"), EXPIRED("Expired", "만료");
 
     private final String value;
+
     private final String description;
 
 }

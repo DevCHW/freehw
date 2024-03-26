@@ -12,6 +12,7 @@ import java.util.Base64;
 public class AesUtils {
 
     private static final String ALGORITHM_AES = "AES";
+
     private static final String ALGORITHM_SHA_1 = "SHA-1";
 
     public static SecretKey prepareSecreteKey(String myKey) {
@@ -21,7 +22,8 @@ public class AesUtils {
             key = sha.digest(key);
             key = Arrays.copyOf(key, 16);
             return new SecretKeySpec(key, ALGORITHM_AES);
-        } catch (NoSuchAlgorithmException e) {
+        }
+        catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
     }
@@ -32,7 +34,9 @@ public class AesUtils {
             Cipher cipher = Cipher.getInstance(ALGORITHM_AES);
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             return Base64.getEncoder().encodeToString(cipher.doFinal(str.getBytes(StandardCharsets.UTF_8)));
-        } catch (NoSuchPaddingException | IllegalBlockSizeException | NoSuchAlgorithmException | BadPaddingException | InvalidKeyException e) {
+        }
+        catch (NoSuchPaddingException | IllegalBlockSizeException | NoSuchAlgorithmException | BadPaddingException
+                | InvalidKeyException e) {
             throw new RuntimeException(e);
         }
     }
@@ -43,7 +47,9 @@ public class AesUtils {
             Cipher cipher = Cipher.getInstance(ALGORITHM_AES);
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
             return new String(cipher.doFinal(Base64.getDecoder().decode(str)));
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException | InvalidKeyException e) {
+        }
+        catch (NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException
+                | InvalidKeyException e) {
             throw new RuntimeException(e);
         }
     }

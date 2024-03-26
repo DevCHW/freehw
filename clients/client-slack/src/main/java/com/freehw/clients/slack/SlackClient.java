@@ -12,12 +12,13 @@ public class SlackClient {
     // TODO : 웹 훅 URL 환경에 맞게 세팅.
     final String webhookUrl = "YOUR_WEBHOOK_URL";
 
-    public boolean send(String message){
+    public boolean send(String message) {
         Slack slack = Slack.getInstance();
-        String payload = "{\"text\":\""+message+"\"}";
+        String payload = "{\"text\":\"" + message + "\"}";
         try {
             WebhookResponse response = slack.send(webhookUrl, payload);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
 

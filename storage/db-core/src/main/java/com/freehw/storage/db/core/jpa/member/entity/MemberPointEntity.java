@@ -13,7 +13,8 @@ import org.hibernate.annotations.Comment;
 public class MemberPointEntity {
 
     @Comment("Primary Key")
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Comment("회원 ID (FK)")
@@ -23,4 +24,5 @@ public class MemberPointEntity {
 
     @Comment("포인트 잔액")
     private Long balance;
+
 }

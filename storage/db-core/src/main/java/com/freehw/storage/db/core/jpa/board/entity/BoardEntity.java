@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "board")
 public class BoardEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long memberId;
@@ -21,4 +22,5 @@ public class BoardEntity {
     private String content;
 
     private Long likeCount;
+
 }

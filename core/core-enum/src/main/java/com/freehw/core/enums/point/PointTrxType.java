@@ -7,9 +7,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum PointTrxType {
 
-    CHARGE("Charge", "입금"),
-    USE("Use", "출금");
+    CHARGE("Charge", "입금"), USE("Use", "출금");
 
     private final String value;
+
     private final String description;
+
 }

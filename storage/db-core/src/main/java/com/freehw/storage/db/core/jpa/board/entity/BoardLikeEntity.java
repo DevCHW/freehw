@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "board_like")
 public class BoardLikeEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -19,4 +20,5 @@ public class BoardLikeEntity {
     private BoardEntity board;
 
     private Long memberId;
+
 }

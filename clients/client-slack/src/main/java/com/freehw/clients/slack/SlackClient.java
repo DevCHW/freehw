@@ -17,7 +17,6 @@ public class SlackClient {
         String payload = "{\"text\":\""+message+"\"}";
         try {
             WebhookResponse response = slack.send(webhookUrl, payload);
-//            System.out.println("response = " + response);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -6,8 +6,9 @@ spring:
     import:
       - monitoring.yml
       - logging.yml
+      - client-slack.yml
       - db-core.yml
-      - client-example.yml
+      - thymeleaf.yml
   web.resources.add-mappings: false
 
 server:
@@ -23,3 +24,9 @@ spring.config.activate.on-profile: local
 
 ---
 spring.config.activate.on-profile: local-dev
+
+---
+spring.config.activate.on-profile: staging
+
+---
+spring.config.activate.on-profile: live

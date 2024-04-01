@@ -10,4 +10,5 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EntityScan(basePackages = "com.freehw.storage.db.core.jpa")
 @EnableJpaRepositories(basePackages = "com.freehw.storage.db.core.jpa")
 public class JpaConfig {
+
 }

@@ -13,8 +13,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "point_trx_history")
 public class PointTrxHistoryEntity extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private PointTrxType type;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 public class MemberRepositoryImpl implements MemberRepository {
 
     private final MemberEntityJpaRepository jpaRepository;
+
     private final JPAQueryFactory queryFactory;
 
 }

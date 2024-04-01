@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "board_category")
 public class BoardCategoryEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 }

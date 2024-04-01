@@ -20,7 +20,8 @@ import java.time.LocalDateTime;
 public class MemberEntity extends BaseEntity {
 
     @Comment("Primary Key")
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Comment("이메일")
@@ -38,12 +39,12 @@ public class MemberEntity extends BaseEntity {
     @Comment("회원 계정 상태")
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private MemberStatus active;
+    private MemberStatus status;
 
     @Comment("회원 이름")
     @Column(nullable = false)
     private String name;
-    
+
     @Comment("회원 생년월일")
     private LocalDate birthDay;
 

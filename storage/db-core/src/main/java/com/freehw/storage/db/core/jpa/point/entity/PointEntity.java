@@ -15,7 +15,8 @@ import java.time.LocalDateTime;
 @Table(name = "points")
 public class PointEntity extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long memberId;

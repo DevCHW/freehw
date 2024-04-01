@@ -14,7 +14,8 @@ import org.hibernate.annotations.Comment;
 public class MemberProfileImageHistoryEntity extends BaseEntity {
 
     @Comment("Primary Key")
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Comment("프로필 이미지 url")

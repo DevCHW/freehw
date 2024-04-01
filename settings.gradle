@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'freehw'
+rootProject.name = 'nemam'
 include 'core:core-api'
 include 'core:core-enum'
 include 'core:core-domain'

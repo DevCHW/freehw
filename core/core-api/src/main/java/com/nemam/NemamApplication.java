@@ -2,12 +2,14 @@ package com.nemam;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @SpringBootApplication
-public class FreeHwApplication {
+@ConfigurationPropertiesScan
+public class NemamApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FreeHwApplication.class, args);
+        SpringApplication.run(NemamApplication.class, args);
     }
 
 }

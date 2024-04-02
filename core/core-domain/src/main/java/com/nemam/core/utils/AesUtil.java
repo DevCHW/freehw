@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
 
-public class AesUtils {
+public class AesUtil {
 
     private static final String ALGORITHM_AES = "AES";
 

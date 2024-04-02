@@ -1,4 +1,4 @@
-package com.nemam.core.api.controller;
+package com.nemam.core.api.presentation;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

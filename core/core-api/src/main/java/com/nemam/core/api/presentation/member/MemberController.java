@@ -1,8 +1,8 @@
-package com.nemam.core.api.controller.member;
+package com.nemam.core.api.presentation.member;
 
-import com.nemam.core.api.controller.member.request.CreateMemberRequest;
-import com.nemam.core.api.controller.member.response.CreateMemberResponse;
-import com.nemam.core.api.controller.member.response.MemberResponse;
+import com.nemam.core.api.presentation.member.request.CreateMemberRequest;
+import com.nemam.core.api.presentation.member.response.CreateMemberResponse;
+import com.nemam.core.api.presentation.member.response.MemberResponse;
 import com.nemam.core.api.support.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

@@ -18,6 +18,10 @@ server:
       max: 600
       min-spare: 100
 
+jwt:
+  secret-key: local20208901234567890123456789012
+  expired-ms: 3600000
+
 ---
 spring.config.activate.on-profile: local
 

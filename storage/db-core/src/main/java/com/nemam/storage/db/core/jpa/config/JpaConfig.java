@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EntityScan(basePackages = "com.freehw.storage.db.core.jpa")
+@EntityScan(basePackages = "com.nemam.storage.db.core.jpa")
 @EnableJpaRepositories(basePackages = "com.nemam.storage.db.core.jpa")
 public class JpaConfig {
 

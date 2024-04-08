@@ -15,12 +15,9 @@ public class JwtUtil {
     }
 
     public static String createToken(CreateTokenParam tokenParam, String secretKey, Long expiredMs) {
-        long now = System.currentTimeMillis();
         Key key = generateKey(secretKey);
         return Jwts.builder()
                 .claims(createClaims(tokenParam))
-                .issuedAt(new Date(now))
-                .expiration(new Date(now + expiredMs))
                 .signWith(key)
                 .compact();
     }

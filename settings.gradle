@@ -19,6 +19,4 @@ include 'support:jwt'
 include 'tests:api-docs'
 include 'storage:db-core'
 include 'web'
-include 'core:core-app'
-findProject(':core:core-app')?.name = 'core-app'
 
